@@ -13,9 +13,8 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: 'alerts', component: AlertsComponent,canActivate: [Authentication] },
   { path: 'servers', component: ServersComponent ,canActivate: [Authentication] },
+  { path: 'home', component: HomeComponent ,canActivate: [Authentication] },
   { path: "register", component: RegisterComponent },
-
-
 
 ];
 

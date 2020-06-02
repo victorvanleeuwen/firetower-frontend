@@ -15,12 +15,12 @@ export class AuthenticationService {
               private cookieService: CookieService) {}
 
   /** GET login codes from the server */
-  getLogin(clientnr: string, password: string) {
+  getLogin(email: string, password: string) {
     const URL = `${AppConfig.ApiBaseURL}/login`;
     this.http
       .post<HttpResponse<any>>(
         URL,
-        { username: clientnr, password },
+        { username: email, password },
         { observe: "response" }
       )
       .subscribe(

@@ -4,7 +4,14 @@ export class AppConfig {
 
  static ApiUrls = {
    GETSTATUSFORPERIOD: "/status/status/getStatusForPeriod",
-   GETUSERPROFILE: "/user/customer/profile"
+   GETSERVERS: "/server/servers",
+   GETALERTS:"/alert/servers",
+   GETAllAlERTS:'/alert/all',
+   DELETEALERTS:'/alert/delete',
+   GETMETRICS:'/metric/servers',
+   GETRECENTMETRIC:'/metric/recent',
+   GETRECENTMETRICS:'/metric/recents'
+
  };
  static LocalStorageKeys = {
    TOKEN: "token"
