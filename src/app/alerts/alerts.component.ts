@@ -19,6 +19,7 @@ export class AlertsComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getServers()
   }
 
   getServers(){
@@ -33,7 +34,6 @@ export class AlertsComponent implements OnInit {
     this.servers.forEach(element => {
       this.idlist.push(element.id)
     });
-    console.log(this.idlist)
     this.getAlerts()
   }
 
@@ -41,10 +41,26 @@ export class AlertsComponent implements OnInit {
     const url = AppConfig.ApiBaseURL+ AppConfig.ApiUrls.GETALERTS
     this.http.post(url,this.idlist).subscribe((res: Alert[])=>{
     this.alerts = res
-    console.log(this.alerts)
     })
   }
 
-
+  delete(alert: Alert){
+    const url = AppConfig.ApiBaseURL + AppConfig.ApiUrls.DELETEALERTS +"?id=" + alert.id
+    this.http.delete(url).subscribe((res: object)=>{
+      const index = this.alerts.indexOf(alert,0)
+      if(index > -1){
+        this.alerts.splice(index,1);
+      }
+    })
+  }
+  getServerName(id:number): string{
+    var found = "Server name unknown";
+    this.servers.forEach(element =>{
+      if(element.id == id){
+        found = element.name
+      }
+    })
+    return found
+  }
 
 }

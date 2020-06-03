@@ -1,1 +1,39 @@
-<p>alerts works!</p>
+<h2>Alerts</h2>
+
+<br>
+<br>
+<div class="container">
+  <table class="table">
+      <thead>
+          <tr>
+              <th>
+                  Date
+              </th>
+              <th>
+                  Message
+              </th>
+              <th>
+                Severity
+              </th>
+              <th>
+                Server
+              </th>
+              <th>
+                Delete
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let alert of alerts">
+              <td>
+                  {{alert.date}}
+              </td>
+              <td>{{alert.message}}</td>
+              <td>{{alert.alertSeverity}}</td>
+              <td>{{getServerName(alert.serverId)}}</td>
+              <td> <button type="button" class="btn btn-outline-primary" (click)="delete(alert)">Delete</button></td>
+          </tr>
+      </tbody>
+
+  </table>
+</div>

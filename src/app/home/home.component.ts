@@ -45,7 +45,6 @@ export class HomeComponent implements OnInit {
     const url = AppConfig.ApiBaseURL+ AppConfig.ApiUrls.GETALERTS
     this.http.post(url,this.idlist).subscribe((res: Alert[])=>{
     this.alerts = res
-    console.log(this.alerts)
     })
   }
 
@@ -53,7 +52,6 @@ export class HomeComponent implements OnInit {
     var found = "Server name unknown";
     this.servers.forEach(element =>{
       if(element.id == id){
-        console.log("Expected result: " + element.name)
         found = element.name
       }
     })
