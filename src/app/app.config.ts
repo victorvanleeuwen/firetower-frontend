@@ -10,9 +10,13 @@ export class AppConfig {
    DELETEALERTS:'/alert/delete',
    GETMETRICS:'/metric/servers',
    GETRECENTMETRIC:'/metric/recent',
-   GETRECENTMETRICS:'/metric/recents'
-
+   GETRECENTMETRICS:'/metric/recents',
+   DELETESERVER: '/server/delete',
+   REGISTER: '/user/register',
+   CURRENT: '/user/current',
+   DELETEUSER: '/user/delete'
  };
+
  static LocalStorageKeys = {
    TOKEN: "token"
  };

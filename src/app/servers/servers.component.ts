@@ -97,4 +97,17 @@ export class ServersComponent implements OnInit {
     return result
   }
 
+  deleteServer(server:Server){
+    if(confirm("Are you shure you want to delete this server?")){
+      const url = AppConfig.ApiBaseURL + AppConfig.ApiUrls.DELETESERVER +"?id=" + server.id
+      this.http.delete(url).subscribe((res: object)=>{
+        const index = this.servers.indexOf(server,0)
+        if(index > -1){
+          this.servers.splice(index,1);
+        }
+      })
+    }
+
+  }
+
 }

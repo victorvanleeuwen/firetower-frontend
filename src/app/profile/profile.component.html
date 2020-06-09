@@ -1,0 +1,15 @@
+<div class="profile-container" *ngIf="user">
+    <div class="gegevens">
+      <h1>Info</h1>
+      <textinput
+        [value]="user.Name"
+        [disabled]="true"
+        [label]="'Name'"
+      ></textinput>
+      <textinput
+        [value]="user.email"
+        [disabled]="true"
+        [label]="'email'"
+      ></textinput>
+      <button type="button" class="btn btn-outline-primary" (click)="delete(user)">Delete account</button>
+  </div>

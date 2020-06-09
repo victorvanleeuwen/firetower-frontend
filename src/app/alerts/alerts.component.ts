@@ -45,13 +45,17 @@ export class AlertsComponent implements OnInit {
   }
 
   delete(alert: Alert){
-    const url = AppConfig.ApiBaseURL + AppConfig.ApiUrls.DELETEALERTS +"?id=" + alert.id
-    this.http.delete(url).subscribe((res: object)=>{
-      const index = this.alerts.indexOf(alert,0)
-      if(index > -1){
-        this.alerts.splice(index,1);
-      }
-    })
+
+    if(confirm("Are you shure you wan to delete this Alert?")){
+
+      const url = AppConfig.ApiBaseURL + AppConfig.ApiUrls.DELETEALERTS +"?id=" + alert.id
+      this.http.delete(url).subscribe((res: object)=>{
+        const index = this.alerts.indexOf(alert,0)
+        if(index > -1){
+          this.alerts.splice(index,1);
+        }
+      })
+    }
   }
   getServerName(id:number): string{
     var found = "Server name unknown";

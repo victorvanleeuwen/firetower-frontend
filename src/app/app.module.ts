@@ -32,6 +32,8 @@ import { FontAwesomeModule }        from "@fortawesome/angular-fontawesome";
 import { TextinputComponent }       from "./custom-components/textinput/textinput.component";
 import { Authentication }           from "./app-routing-guards";
 import { httpInterceptors }         from "./REST/http-interceptors/interceptors";
+import { PrivacyComponent }         from './privacy/privacy.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,9 @@ import { httpInterceptors }         from "./REST/http-interceptors/interceptors"
     HomeComponent,
     LoginComponent,
     RegisterComponent,
-    TextinputComponent
+    TextinputComponent,
+    PrivacyComponent,
+    ProfileComponent
   ],
   imports: [
     MatSortModule,

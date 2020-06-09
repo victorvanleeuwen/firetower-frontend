@@ -29,5 +29,22 @@
 
     </table>
 </div>
+
+<div class="container">
+  <table class="table">
+      <thead>
+          <tr>
+              <th>Name</th>
+              <th>Delete</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let server of servers">
+              <td>{{server.name}}</td>
+              <td> <button type="button" class="btn btn-outline-primary" (click)="deleteServer(server)">Delete</button></td>
+          </tr>
+      </tbody>
+  </table>
+</div>
 <br>
 <br>

@@ -7,21 +7,25 @@ export class Metric{
       operatingSystemType = "",
       metricType = "",
       serverId = 0,
+      used = false,
     } = obj;
 
     this.id = id;
     this.value = value;
     this.date = date;
-    this.operatingSystemType =operatingSystemType;
+    this.operatingSystemType = operatingSystemType;
     this.serverId = serverId;
     this.metricType = metricType;
+    this.used = used
   }
+
   id: number;
   date: Date;
   value: number;
   operatingSystemType: string;
   metricType: string;
   serverId: number;
+  used: boolean;
 }
 
 export interface MetricData {
@@ -31,4 +35,5 @@ export interface MetricData {
   operatingSystemType: string;
   metricType: string;
   serverId: number;
+  used: boolean;
 }
