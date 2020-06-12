@@ -14,7 +14,8 @@ export class AppConfig {
    DELETESERVER: '/server/delete',
    REGISTER: '/user/register',
    CURRENT: '/user/current',
-   DELETEUSER: '/user/delete'
+   DELETEUSER: '/user/delete',
+   GETMONITORING: '/monitoring/all'
  };
 
  static LocalStorageKeys = {

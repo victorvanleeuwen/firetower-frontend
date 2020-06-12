@@ -34,6 +34,7 @@ import { Authentication }           from "./app-routing-guards";
 import { httpInterceptors }         from "./REST/http-interceptors/interceptors";
 import { PrivacyComponent }         from './privacy/privacy.component';
 import { ProfileComponent } from './profile/profile.component';
+import { MonitoringComponent } from './monitoring/monitoring.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { ProfileComponent } from './profile/profile.component';
     RegisterComponent,
     TextinputComponent,
     PrivacyComponent,
-    ProfileComponent
+    ProfileComponent,
+    MonitoringComponent
   ],
   imports: [
     MatSortModule,
