@@ -8,6 +8,7 @@ import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import {PrivacyComponent} from "./privacy/privacy.component";
 import {ProfileComponent} from "./profile/profile.component";
+import {MonitoringComponent} from "./monitoring/monitoring.component"
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'servers', component: ServersComponent ,canActivate: [Authentication] },
   { path: 'home', component: HomeComponent ,canActivate: [Authentication] },
   { path: "register", component: RegisterComponent },
-  {path: "profile", component: ProfileComponent,canActivate: [Authentication] }
+  {path: "profile", component: ProfileComponent,canActivate: [Authentication] },
+  {path:"monitoring", component: MonitoringComponent}
 
 ];
 
