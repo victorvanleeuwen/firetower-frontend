@@ -1,6 +1,6 @@
 export class AppConfig {
 
-  static ApiBaseURL = "http://localhost:8762";
+  static ApiBaseURL = "http://34.105.251.247:8762";
 
  static ApiUrls = {
    GETSTATUSFORPERIOD: "/status/status/getStatusForPeriod",
